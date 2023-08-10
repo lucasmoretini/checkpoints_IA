@@ -1,0 +1,686 @@
+[
+    {
+        "id": "e1795feab764fb69",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9fe5949eee748b7e",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "55de16e19429e032",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "55de16e19429e032",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "58a84643de68c07d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "bb20a7946f42661a",
+        "type": "ui_group",
+        "name": "Vento",
+        "tab": "55de16e19429e032",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "810c58c5bb137eae",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b16e10e17e8f9cc2",
+        "type": "inject",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "17",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "05dea4e29840a1c8"
+            ]
+        ]
+    },
+    {
+        "id": "135e5a4c77500939",
+        "type": "debug",
+        "z": "e1795feab764fb69",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "85fca474f2794990",
+        "type": "json",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "9177d3b55e575280",
+                "2d1f59a73db6e93f"
+            ]
+        ]
+    },
+    {
+        "id": "05dea4e29840a1c8",
+        "type": "http request",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=ae10626011dbb050cfebc1ffa52f7829&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 140,
+        "wires": [
+            [
+                "85fca474f2794990"
+            ]
+        ]
+    },
+    {
+        "id": "9177d3b55e575280",
+        "type": "change",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 260,
+        "wires": [
+            [
+                "135e5a4c77500939"
+            ]
+        ]
+    },
+    {
+        "id": "2d1f59a73db6e93f",
+        "type": "function",
+        "z": "e1795feab764fb69",
+        "name": "function",
+        "func": "msg.payload = {\n    \"temperatura\": msg.payload.main.temp,\n    \"min\": msg.payload.main.temp_min,\n    \"max\": msg.payload.main.temp_max,\n    \"vento\": msg.payload.wind.speed\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 360,
+        "wires": [
+            [
+                "4f42a84f658c1a44"
+            ]
+        ]
+    },
+    {
+        "id": "4f42a84f658c1a44",
+        "type": "debug",
+        "z": "e1795feab764fb69",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "26e48a11f6cc4d3d",
+        "type": "http request",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=ae10626011dbb050cfebc1ffa52f7829&units=metric",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "75803a2f32fc220c"
+            ]
+        ]
+    },
+    {
+        "id": "75803a2f32fc220c",
+        "type": "json",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 730,
+        "y": 480,
+        "wires": [
+            [
+                "38c0d33522d5c9b4",
+                "d196ca5084246967",
+                "83baf17321ce0961",
+                "fb23931864034622"
+            ]
+        ]
+    },
+    {
+        "id": "38c0d33522d5c9b4",
+        "type": "change",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "06f9e82efa550a0a"
+            ]
+        ]
+    },
+    {
+        "id": "d196ca5084246967",
+        "type": "change",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_min",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "a7edc658b24fa614"
+            ]
+        ]
+    },
+    {
+        "id": "83baf17321ce0961",
+        "type": "change",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_max",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 540,
+        "wires": [
+            [
+                "39e77413903b5345"
+            ]
+        ]
+    },
+    {
+        "id": "fb23931864034622",
+        "type": "change",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind.speed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 600,
+        "wires": [
+            [
+                "2229529b7bc58ff0"
+            ]
+        ]
+    },
+    {
+        "id": "06f9e82efa550a0a",
+        "type": "ui_gauge",
+        "z": "e1795feab764fb69",
+        "name": "Temperatura",
+        "group": "9fe5949eee748b7e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "F",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#0c00b3",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1190,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a7edc658b24fa614",
+        "type": "ui_gauge",
+        "z": "e1795feab764fb69",
+        "name": "Min",
+        "group": "9fe5949eee748b7e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Min",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#2700b3",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1170,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "39e77413903b5345",
+        "type": "ui_gauge",
+        "z": "e1795feab764fb69",
+        "name": "Max",
+        "group": "9fe5949eee748b7e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Max",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#2700b3",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1170,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2229529b7bc58ff0",
+        "type": "ui_gauge",
+        "z": "e1795feab764fb69",
+        "name": "Vento",
+        "group": "bb20a7946f42661a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Vento",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1170,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "022240bff61354a0",
+        "type": "inject",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "26e48a11f6cc4d3d"
+            ]
+        ]
+    },
+    {
+        "id": "7cb42bce77ae3088",
+        "type": "mqtt in",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "topic": "pub-sub-fiap",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "810c58c5bb137eae",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 510,
+        "y": 800,
+        "wires": [
+            [
+                "f1e4281483b0be9d"
+            ]
+        ]
+    },
+    {
+        "id": "a18e493b7a5fa09f",
+        "type": "inject",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Chegueii !!",
+        "payloadType": "str",
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "b1910988e85ec9a8"
+            ]
+        ]
+    },
+    {
+        "id": "b1910988e85ec9a8",
+        "type": "mqtt out",
+        "z": "e1795feab764fb69",
+        "name": "",
+        "topic": "pub-sub-fiap",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "810c58c5bb137eae",
+        "x": 750,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "f1e4281483b0be9d",
+        "type": "debug",
+        "z": "e1795feab764fb69",
+        "name": "msg.payload",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 800,
+        "wires": []
+    }
+]
